@@ -1,0 +1,33 @@
+import {
+    faGithub,
+    faInstagram,
+    faLinkedin,
+    faTwitch,
+    faTwitter,
+} from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+const Mediabar = () => {
+    const media = [
+        { icon: faGithub, link: 'https://github.com/Kuntash' },
+        { icon: faInstagram, link: 'https://www.instagram.com/kun_tash/' },
+        { icon: faTwitter, link: 'https://twitter.com/KuntashTweets' },
+        { icon: faLinkedin, link: 'https://www.linkedin.com/in/kunga-tashi/' },
+    ];
+    return (
+        <div className="flex flex-col p-2 max-w-min gap-y-5">
+            {media.map((handle) => {
+                return (
+                    <a href={handle.link}>
+                        <FontAwesomeIcon
+                            className="transform transition duration-250 ease-out w-6 h-6 text-white hover:text-green hover:-translate-y-0.5 cursor-pointer"
+                            icon={handle.icon}
+                        />
+                    </a>
+                );
+            })}
+        </div>
+    );
+};
+
+export default Mediabar;
