@@ -13,12 +13,8 @@ const Index = () => {
         <div className="bg-navy ">
             {/* Head component for NEXT.JS */}
             <Head>
-                <title>| Kunga Tashi |</title>
-                <link
-                    rel="icon"
-                    type="image/x-icon"
-                    href="images/favicon.ico"
-                />
+                <title> Kunga Tashi </title>
+                <link rel="shortcut icon" href="/favicon.ico" />
             </Head>
 
             <Navbar />
