@@ -15,17 +15,18 @@ const Mediabar = () => {
         { icon: faLinkedin, link: 'https://www.linkedin.com/in/kunga-tashi/' },
     ];
     return (
-        <div className="flex flex-col p-2 max-w-min gap-y-5">
-            {media.map((handle) => {
+        <div className="md:fixed md:bottom-0 md:left-6 lg:left-10 max-w-min gap-y-8 flex md:flex-col p-2 md:gap-y-8 gap-x-5">
+            {media.map((handle, i) => {
                 return (
-                    <a href={handle.link}>
+                    <a key={i} href={handle.link}>
                         <FontAwesomeIcon
-                            className="transform transition duration-250 ease-out w-6 h-6 text-white hover:text-green hover:-translate-y-0.5 cursor-pointer"
+                            className="transform transition duration-250 ease-out w-6 h-6 text-slate-light hover:text-green hover:-translate-y-0.5 cursor-pointer"
                             icon={handle.icon}
                         />
                     </a>
                 );
             })}
+            <div className="self-center hidden md:flex h-20 w-[2px] bg-slate-light"></div>
         </div>
     );
 };
