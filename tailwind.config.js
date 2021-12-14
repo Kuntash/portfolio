@@ -7,12 +7,6 @@ module.exports = {
     important: true, // or 'media' or 'class'
     plugins: [require('tailwindcss-writing-mode')],
     theme: {
-        screens: {
-            sm: '480px',
-            md: '768px',
-            lg: '976px',
-            xl: '1440px',
-        },
         colors: {
             navy: {
                 DEFAULT: '#0a192f',

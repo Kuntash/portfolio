@@ -1,12 +1,8 @@
 import Head from 'next/head';
 import dynamic from 'next/dynamic';
 import Footer from '../components/Footer/Footer';
-const Heading = dynamic(() => import('../components/Heading/Heading'), {
-    ssr: false,
-});
-const Navbar = dynamic(() => import('../components/Navbar/Navbar'), {
-    ssr: false,
-});
+import Heading from '../components/Heading/Heading';
+import Navbar from '../components/Navbar/Navbar';
 
 const Index = () => {
     return (

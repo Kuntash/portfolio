@@ -1,6 +1,5 @@
 import { faKorvue } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 import { useEffect, useRef, useState } from 'react';
 import CtaButton from '../Buttons/CtaButton';
 import { gsap } from 'gsap';
@@ -20,25 +19,31 @@ const Navbar = () => {
 
     useEffect(() => {
         // gsap.from(descendents)
-        console.log(icon);
         tl.current = gsap
             .timeline()
-            .from(
+            .set(navContainer.current.children, { opacity: 0, y: -100 })
+            .set(icon.current, { opacity: 0, y: -100 })
+            .to(
                 navContainer.current.children,
                 {
-                    opacity: 0,
-                    y: -100,
+                    opacity: 1,
+                    y: 0,
                     duration: 1,
                     ease: Bounce.easeOut,
                     stagger: 0.2,
                 },
-                1
+                0.5
             )
-            .from(icon.current, {
-                y: -100,
-                duration: 1,
-                ease: Bounce.easeOut,
-            });
+            .to(
+                icon.current,
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    ease: Bounce.easeOut,
+                },
+                0.5
+            );
     });
 
     const navTitle = [
@@ -50,11 +55,10 @@ const Navbar = () => {
     return (
         <div
             style={{ ...navStyle }}
-            className={`w-full h-24 p-4 sm:flex hidden sm:justify-between sm:items-center`}
+            className={`w-full h-24 p-4 md:flex hidden md:justify-between md:items-center`}
         >
-            <a href="#">
+            <a ref={icon} href="#">
                 <FontAwesomeIcon
-                    rel={icon}
                     className=" h-10 w-10 ml-6 text-green"
                     icon={faKorvue}
                 />

@@ -10,12 +10,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Mediabar = () => {
     const media = [
         { icon: faGithub, link: 'https://github.com/Kuntash' },
-        { icon: faInstagram, link: 'https://www.instagram.com/kun_tash/' },
-        { icon: faTwitter, link: 'https://twitter.com/KuntashTweets' },
         { icon: faLinkedin, link: 'https://www.linkedin.com/in/kunga-tashi/' },
+        { icon: faTwitter, link: 'https://twitter.com/KuntashTweets' },
+        { icon: faInstagram, link: 'https://www.instagram.com/kun_tash/' },
     ];
     return (
-        <div className="md:fixed md:bottom-0 md:left-6 lg:left-10 max-w-min gap-y-8 flex md:flex-col p-2 md:gap-y-8 gap-x-5">
+        <div className="md:fixed md:bottom-0 md:left-6 lg:left-10 md:gap-y-8 max-w-min gap-x-10 sm:gap-x-12 flex md:flex-col pb-2">
             {media.map((handle, i) => {
                 return (
                     <a key={i} href={handle.link}>
