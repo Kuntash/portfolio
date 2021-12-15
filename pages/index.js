@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 import Footer from '../components/Footer/Footer';
 import Heading from '../components/Heading/Heading';
 import Navbar from '../components/Navbar/Navbar';
+import About from '../components/About/About';
 
 const Index = () => {
     return (
@@ -15,6 +16,7 @@ const Index = () => {
 
             <Navbar />
             <Heading />
+            <About />
             <Footer />
         </div>
     );
