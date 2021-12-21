@@ -1,5 +1,3 @@
-import Image from './Image';
-
 const About = () => {
     return (
         <div className="flex flex-col md:px-52 md:pt-12 text-center ">
@@ -35,7 +33,7 @@ const About = () => {
                         working with recently:
                     </p>
                 </div>
-                <Image />
+                <div className=" rounded-lg grow-0 shrink-0 h-[300px] basis-[300px] bg-[url('../../public/images/profile-square-300.png')] bg-green bg-blend-multiply hover:bg-transparent relative"></div>
             </div>
         </div>
     );
