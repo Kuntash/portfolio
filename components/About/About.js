@@ -11,12 +11,10 @@ const About = () => {
             <div className="flex md:mt-8 gap-x-12">
                 <div className="">
                     <p className="text-left text-slate text-[18px]">
-                        Hello! My name is Brittany and I enjoy creating things
-                        that live on the internet. My interest in web
-                        development started back in 2012 when I decided to try
-                        editing custom Tumblr themes — turns out hacking
-                        together a custom reblog button taught me a lot about
-                        HTML & CSS!
+                        Hey there!! Thanks for visiting my portfolio, let my
+                        start by telling you a bit about me. My name is Kunga
+                        Tashi and I am sophomore at NIT Raipur doing B.Tech in
+                        Computer Science.
                     </p>
                     <p className="text-left text-slate text-[18px]">
                         Fast-forward to today, and I’ve had the privilege of
@@ -33,7 +31,10 @@ const About = () => {
                         working with recently:
                     </p>
                 </div>
-                <div className=" rounded-lg grow-0 shrink-0 h-[300px] basis-[300px] bg-[url('../../public/images/profile-square-300.png')] bg-green bg-blend-multiply hover:bg-transparent relative"></div>
+                <div className="my-profile-container relative">
+                    <div className="profile-border ease-in-out duration-500 absolute w-full h-full border-2 border-green rounded-lg top-5 left-5"></div>
+                    <div className=" absolute w-full h-full bg-green hover:bg-transparent my-profile"></div>
+                </div>
             </div>
         </div>
     );
