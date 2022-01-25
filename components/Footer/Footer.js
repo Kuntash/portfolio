@@ -19,7 +19,7 @@ const Footer = () => {
     return (
         <div
             ref={footerContainer}
-            className="pb-4 p-4 flex items-center flex-col justify-center gap-y-2 sm:gap-y-4"
+            className="pb-4 flex items-center flex-col justify-center gap-y-2 sm:gap-y-4"
         >
             <Mediabar />
             <Emailbar />

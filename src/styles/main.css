@@ -3,14 +3,45 @@
 @tailwind utilities;
 
 @layer components {
+    /* Heading Component */
+    .heading {
+        font-size: clamp(40px, 8vw, 80px);
+    }
+    /* Email bar */
+    .horizontal-mode {
+        writing-mode: horizontal-tb;
+    }
+
+    .vertical-mode {
+        writing-mode: vertical-rl;
+    }
+    /* Navbar  */
+    .sticky {
+        @apply fixed;
+    }
+    /* Profile Image */
     .my-profile-container {
-        @apply grow-0 shrink-0 h-[300px] basis-[300px];
+        display: inline-block;
     }
     .my-profile-container:hover .profile-border {
         @apply top-4 left-4;
     }
+
+    .my-profile-container:hover .profile-overlay {
+        @apply bg-transparent;
+    }
     .my-profile {
-        @apply bg-[url('../../public/images/profile-square-300.png')] bg-blend-multiply rounded-lg;
+        width: 100%;
+    }
+
+    .profile-overlay {
+        width: 100%;
+        @apply bg-green rounded-lg mix-blend-multiply hover:bg-transparent absolute top-0 w-full left-0 h-full;
+    }
+
+    /* About Section */
+    .about-me-heading {
+        font-size: clamp(25px, 5vw, 32px);
     }
 }
 body::-webkit-scrollbar {

@@ -1,17 +1,10 @@
+// TODO: Chat with me button should link to email
+
 import gsap, { Power3 } from 'gsap';
 import { useEffect, useRef } from 'react';
 import CtaButton from '../Buttons/CtaButton';
 
 const Heading = () => {
-    //For font clamping instead of media query adjustment
-    const bigHeading1 = useRef();
-    const bigHeading2 = useRef();
-
-    useEffect(() => {
-        bigHeading1.current.style.fontSize = 'clamp(40px, 8vw, 80px)';
-        bigHeading2.current.style.fontSize = 'clamp(40px, 8vw, 80px)';
-    });
-
     //using useRef() for gsap animation of headers
     const headingContainer = useRef();
 
@@ -32,17 +25,17 @@ const Heading = () => {
                 },
                 1
             );
-    });
+    }, []);
     return (
         <div
             ref={headingContainer}
-            className="pl-8 pt-4 pr-8 sm:pl-12 md:pl-40 lg:pl-48 md:pt-[100px] font-sans min-h-screen"
+            className="w-full md:px-16 lg:px-20 pt-4 md:pt-[100px] font-sans md:mb-32 mb-20"
         >
             <p className="font-mono sm:text-xl text-green">Hi, my name is</p>
-            <h1 ref={bigHeading1} className=" font-bold text-slate-lightest">
+            <h1 className=" heading font-bold text-slate-lightest">
                 Kunga Tashi.
             </h1>
-            <h2 ref={bigHeading2} className="font-bold text-slate">
+            <h2 className="heading font-bold text-slate">
                 I am a web developer.
             </h2>
             <p className="text-slate text-[18px] max-w-lg mb-4">

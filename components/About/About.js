@@ -1,39 +1,82 @@
+//TODO:
+/*
+    1: Check for links and make a link section 
+    2: Make the component responsive
+    3: Add animation and make it scrubbable using gsap3
+*/
+import gsap, { Power3 } from 'gsap';
+import { useEffect, useRef } from 'react';
+import Title from '../Title';
 const About = () => {
+    const aboutSection = useRef();
+    const aboutHeading = useRef();
+    const aboutParagraph = useRef();
+    const aboutImage = useRef();
+    let tl = useRef();
+
+    useEffect(() => {}, []);
     return (
-        <div className="flex flex-col md:px-52 md:pt-12 text-center ">
-            <h1 className="font-sans font-bold flex items-center">
-                <span className="text-green mr-4 md:text-2xl">01.</span>
-                <span className="text-slate-lightest md:text-3xl mr-4">
-                    About Me
-                </span>
-                <div className="w-60 h-[1px] bg-navy-lightest "></div>
-            </h1>
-            <div className="flex md:mt-8 gap-x-12">
-                <div className="">
+        <div
+            ref={aboutSection}
+            className="flex flex-col md:px-8 lg:px-12 xl:px-20 text-center mb-32"
+        >
+            {/* Heading: ABOUT ME part */}
+            <Title id="01." heading="About Me" />
+
+            {/* Paragraph and Profile Container */}
+            <div className="block md:grid md:justify-center md:grid-cols-2 mt-8 md:mt-12 lg:gap-x-8 xl:gap-x-12">
+                {/* Paragraph Container */}
+                <div ref={aboutParagraph} className="flex flex-col gap-y-4">
                     <p className="text-left text-slate text-[18px]">
-                        Hey there!! Thanks for visiting my portfolio, let my
-                        start by telling you a bit about me. My name is Kunga
-                        Tashi and I am sophomore at NIT Raipur doing B.Tech in
-                        Computer Science.
+                        Hey there!! Thanks for visiting my portfolio, let me
+                        start by telling a bit about me. My name is Kunga Tashi
+                        and I am sophomore at
+                        {/* FIXME: Link here to www.nitrr.ac.in */} NIT Raipur
+                        doing B.Tech in Computer Science.
                     </p>
                     <p className="text-left text-slate text-[18px]">
-                        Fast-forward to today, and I’ve had the privilege of
-                        working at an advertising agency, a start-up, a huge
-                        corporation, and a student-led design studio. My main
-                        focus these days is building accessible, inclusive
-                        products and digital experiences at Upstatement for a
-                        variety of clients.
+                        Talking about my experiences with the modern web. I
+                        learned HTML and CSS in 2017 when I was in my high
+                        school but lost the touch for about 2 years. But in my
+                        1st year as an undergrad, I thought of diving once again
+                        into the world of web and it clicked this time. While
+                        Covid was spreading all around, I learned different
+                        parts of web while making simple projects which are in
+                        the
+                        {/* FIXME: internal link to "archive section" */}{' '}
+                        archive section.
                     </p>
                     <p className="text-left text-slate text-[18px]">
-                        I also recently launched a course that covers everything
-                        you need to build a web app with the Spotify API using
-                        Node & React. Here are a few technologies I’ve been
-                        working with recently:
+                        Over a span of 2 years or so, I have accumulated
+                        different skills and experimented with different
+                        library, frameworks and languages. Following are the
+                        languages and tech I have used to make projects and have
+                        experience with:
                     </p>
+                    {/* TODO: Make a bullet point list of different tech stacks */}
+                    {/* TODO: Share a list of all the things you will be doing in 2022, different ideas, course you will be following etc */}
                 </div>
-                <div className="my-profile-container relative">
-                    <div className="profile-border ease-in-out duration-500 absolute w-full h-full border-2 border-green rounded-lg top-5 left-5"></div>
-                    <div className=" absolute w-full h-full bg-green hover:bg-transparent my-profile"></div>
+
+                {/* About Me: | Profile | */}
+                <div className="flex justify-center items-start">
+                    {/*Profile Container for changing resizing based on viewport */}
+                    <div
+                        ref={aboutImage}
+                        className="my-profile-container relative xl:max-w-[300px] xl:max-h-[300px] md:max-w-[250px] md:max-h-[250px] max-h-[80vw] max-w-[80vw]"
+                    >
+                        {/* Border Animation Component */}
+                        <div className="profile-border ease-in-out duration-500 absolute w-full h-full border-2 border-green rounded-lg sm:top-5 sm:left-5 top-3 left-3"></div>
+
+                        {/* Profile Image */}
+                        <img
+                            src="images/profile-square-300.png"
+                            className="my-profile rounded-lg relative"
+                            alt=""
+                        />
+
+                        {/* Profile Overlay Green */}
+                        <div className="profile-overlay"></div>
+                    </div>
                 </div>
             </div>
         </div>

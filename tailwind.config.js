@@ -10,6 +10,7 @@ module.exports = {
                 DEFAULT: '#0a192f',
                 light: '#112240',
                 lightest: '#233554',
+                shadow: 'rgba(2,12,27,0.7)',
             },
             slate: {
                 DEFAULT: '#8892b0',
@@ -28,6 +29,7 @@ module.exports = {
             },
         },
         extend: {
+            // Custom animations keyframes
             keyframes: {
                 loader: {
                     '0%': { transform: 'scale(0.5)', opacity: 0.1 },
@@ -38,8 +40,20 @@ module.exports = {
                     },
                 },
             },
+
+            // Custom animations
             animation: {
                 loader: 'loader 2s ease-in-out infinite',
+            },
+
+            // Custom box shadows
+            boxShadow: {
+                customShadow: '0 10px 30px -15px rgba(2,12,27,0.7)',
+            },
+
+            // Custom border radius
+            borderRadius: {
+                card: '4px',
             },
         },
     },

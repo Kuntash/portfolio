@@ -1,9 +1,9 @@
 import Head from 'next/head';
-import dynamic from 'next/dynamic';
 import Footer from '../components/Footer/Footer';
 import Heading from '../components/Heading/Heading';
 import Navbar from '../components/Navbar/Navbar';
 import About from '../components/About/About';
+import Projects from '../components/Projects/Projects';
 
 const Index = () => {
     return (
@@ -15,9 +15,13 @@ const Index = () => {
             </Head>
 
             <Navbar />
-            <Heading />
-            <About />
-            <Footer />
+            {/*FIXME: Change the padding media query to clamp()  */}
+            <div className="max-w-full w-screen flex flex-col xl:px-[150px] lg:px-[100px] md:px-[50px] sm:px-[25px] px-[20px]">
+                <Heading />
+                <About />
+                <Projects />
+                <Footer />
+            </div>
         </div>
     );
 };
