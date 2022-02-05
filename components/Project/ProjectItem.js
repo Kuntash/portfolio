@@ -9,7 +9,7 @@ const ProjectItem = ({ project }) => {
     return (
         <div className="group grid grid-cols-12 mt-8 md:mt-12 ">
             {/*Profile Container for changing resizing based on viewport */}
-            <div className="my-profile-container md:group-even:col-start-7 md:group-even:col-end-13 md:row-start-1 md:row-end-7 group-odd:md:col-start-1 group-odd:md:col-end-7 xl:max-w-[700px] shadow-customShadow relative">
+            <div className="my-profile-container col-span-full row-start-1 row-end-7 md:group-even:col-start-7 md:group-even:col-end-13   group-odd:md:col-start-1 group-odd:md:col-end-7 xl:max-w-[700px] shadow-customShadow relative opacity-25">
                 {/* Profile Image */}
                 <img
                     src={imageSrc}
@@ -21,7 +21,7 @@ const ProjectItem = ({ project }) => {
                 <div className="profile-overlay"></div>
             </div>
             {/* Project Description */}
-            <div className="md:text-left md:group-odd:text-right md:col-start-1 md:col-end-8 md:row-start-1 md:row-end-7 md:group-odd:col-start-6 md:group-odd:col-end-13 z-10">
+            <div className="col-span-full row-start-1 row-end-7 md:text-left md:group-odd:text-right md:col-start-1 md:col-end-8  md:group-odd:col-start-6 md:group-odd:col-end-13 z-10 p-5 md:p-0 bg-navy/75">
                 <h2 className="text-green font-mono font-bold text-sm tracking-widest mb-2">
                     Project Name
                 </h2>
@@ -31,12 +31,12 @@ const ProjectItem = ({ project }) => {
                 >
                     {title}
                 </a>
-                <div className="py-4 px-8 shadow-customShadow bg-navy-light  rounded-card">
+                <div className="py-4 md:px-8 shadow-customShadow md:bg-navy-light rounded-card backdrop-op">
                     <p className="text-slate text-[17px]">{description}</p>
                 </div>
                 <ul
-                    className="py-6 flex md:group-even:justify-start md:justify-end text-slate text-[14px]
-        tracking-widest font-semibold gap-x-8"
+                    className="py-6 flex justify-start md:group-even:justify-start md:justify-end text-slate text-[14px]
+        tracking-widest font-semibold gap-x-4 md:gap-x-8"
                 >
                     {techList.map((tech, index) => (
                         <li key={index}>{tech}</li>
