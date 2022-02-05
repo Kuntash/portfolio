@@ -17,7 +17,8 @@
     }
     /* Navbar  */
     .sticky {
-        @apply fixed;
+        @apply fixed !important;
+        backdrop-filter: blur(10px);
     }
     /* Profile Image */
     .my-profile-container {

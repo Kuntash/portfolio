@@ -1,24 +1,16 @@
 import { faKorvue } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import CtaButton from '../Buttons/CtaButton';
 import { gsap } from 'gsap';
 import { Bounce } from 'gsap';
-// import styles from './Navbar.module.css';
-// Navbar animation: When scrolled up the navbar will show the nav other wise hide it
-
 const Navbar = () => {
     //useRef hook
-    const [navStyle, setNavStyle] = useState({
-        position: 'unset',
-        boxShadow: 'none',
-    });
     const navContainer = useRef();
     const icon = useRef();
     const tl = useRef();
 
     useEffect(() => {
-        // gsap.from(descendents)
         tl.current = gsap
             .timeline()
             .set(navContainer.current.children, { opacity: 0, y: -100 })
@@ -44,18 +36,16 @@ const Navbar = () => {
                 },
                 0.5
             );
-    });
+    }, []);
 
     const navTitle = [
         { title: 'About', link: 'about' },
         { title: 'Projects', link: 'projects' },
         { title: 'Contact', link: 'contact' },
     ];
-    // Stick navigation
     return (
         <div
-            style={{ ...navStyle }}
-            className={`w-full h-24 p-4 md:flex hidden md:justify-between md:items-center`}
+            className={`shadow-customShadow w-full h-24 p-4 md:flex hidden md:justify-between md:items-center transition `}
         >
             <a ref={icon} href="#">
                 <FontAwesomeIcon
@@ -63,7 +53,7 @@ const Navbar = () => {
                     icon={faKorvue}
                 />
             </a>
-            <div ref={navContainer} className="flex items-center">
+            <div ref={navContainer} className="flex items-center transition">
                 {/* Different Nav tabs or titles  */}
                 {navTitle.map((el, i) => (
                     <a
@@ -79,7 +69,11 @@ const Navbar = () => {
                 ))}
 
                 {/* Resume button */}
-                <CtaButton title="Resume" padding="px-4 py-2" />
+                <CtaButton
+                    title="Resume"
+                    padding="px-4 py-2"
+                    link="./files/resume.pdf"
+                />
             </div>
         </div>
     );

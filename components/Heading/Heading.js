@@ -47,6 +47,7 @@ const Heading = () => {
             <CtaButton
                 title="Chat with me!!"
                 padding="px-4 py-2 md:px-8 md:py-4"
+                link=""
             />
         </div>
     );

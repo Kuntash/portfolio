@@ -3,7 +3,7 @@ import Footer from '../components/Footer/Footer';
 import Heading from '../components/Heading/Heading';
 import Navbar from '../components/Navbar/Navbar';
 import About from '../components/About/About';
-import Projects from '../components/Projects/Projects';
+import Project from '../components/Project/Project';
 
 const Index = () => {
     return (
@@ -19,7 +19,7 @@ const Index = () => {
             <div className="max-w-full w-screen flex flex-col xl:px-[150px] lg:px-[100px] md:px-[50px] sm:px-[25px] px-[20px]">
                 <Heading />
                 <About />
-                <Projects />
+                <Project />
                 <Footer />
             </div>
         </div>
