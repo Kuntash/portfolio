@@ -27,17 +27,15 @@
     .my-profile-container:hover .profile-border {
         @apply top-4 left-4;
     }
-
-    .my-profile-container:hover .profile-overlay {
+    .profile-overlay:hover {
         @apply bg-transparent;
     }
     .my-profile {
-        width: 100%;
+        @apply w-full h-full;
     }
 
     .profile-overlay {
-        width: 100%;
-        @apply bg-green rounded-lg mix-blend-multiply hover:bg-transparent absolute top-0 w-full left-0 h-full;
+        @apply bg-green rounded-lg mix-blend-multiply absolute top-0 w-full left-0 h-full transition ease-out;
     }
 
     /* About Section */

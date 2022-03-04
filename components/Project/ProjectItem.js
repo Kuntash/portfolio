@@ -9,19 +9,18 @@ const ProjectItem = ({ project }) => {
     return (
         <div className="group grid grid-cols-12 mt-8 md:mt-12 ">
             {/*Profile Container for changing resizing based on viewport */}
-            <div className="my-profile-container col-span-full row-start-1 row-end-7 md:group-even:col-start-7 md:group-even:col-end-13   group-odd:md:col-start-1 group-odd:md:col-end-7 xl:max-w-[700px] shadow-customShadow relative opacity-25">
+            <div className="my-profile-container col-span-full row-start-1 row-end-7 md:group-even:col-start-7 md:group-even:col-end-13   group-odd:md:col-start-1 group-odd:md:col-end-7 xl:max-w-[700px] shadow-customShadow relative">
                 {/* Profile Image */}
                 <img
                     src={imageSrc}
                     className="my-profile rounded-lg relative"
                     alt=""
                 />
-
                 {/* Profile Overlay Green */}
                 <div className="profile-overlay"></div>
             </div>
             {/* Project Description */}
-            <div className="col-span-full row-start-1 row-end-7 md:text-left md:group-odd:text-right md:col-start-1 md:col-end-8  md:group-odd:col-start-6 md:group-odd:col-end-13 z-10 p-5 md:p-0 bg-navy/75">
+            <div className="col-span-full row-start-1 row-end-7 md:text-left md:group-odd:text-right md:col-start-1 md:col-end-8  md:group-odd:col-start-6 md:group-odd:col-end-13 z-10 p-5 md:p-0 bg-navy/50 md:bg-transparent">
                 <h2 className="text-green font-mono font-bold text-sm tracking-widest mb-2">
                     Project Name
                 </h2>

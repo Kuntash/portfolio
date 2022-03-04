@@ -4,9 +4,12 @@
     2: Make the component responsive
     3: Add animation and make it scrubbable using gsap3
 */
-import gsap, { Power3 } from 'gsap';
+import gsap, { Power2, Power3 } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useEffect, useRef } from 'react';
 import Title from '../Title';
+
+gsap.registerPlugin(ScrollTrigger);
 const About = () => {
     const aboutSection = useRef();
     const aboutHeading = useRef();
@@ -14,14 +17,41 @@ const About = () => {
     const aboutImage = useRef();
     let tl = useRef();
 
-    useEffect(() => {}, []);
+    // Animation section
+    useEffect(() => {
+        tl.current = gsap.timeline({
+            scrollTrigger: {
+                trigger: aboutSection.current,
+                scrub: 1,
+            },
+        });
+
+        const aboutScrollTrigger = gsap.fromTo(
+            [aboutHeading.current, aboutImage.current, aboutParagraph.current],
+
+            {
+                opacity: 0,
+                y: 200,
+                duration: 0.2,
+                ease: Power2.easeOut,
+                stagger: 0.2,
+                delay: 0,
+            },
+            {
+                opacity: 1,
+                y: 0,
+            }
+        );
+        tl.current.add(aboutScrollTrigger);
+        // tl.current.add(imageScrollTrigger, '+=0.2');
+    }, []);
     return (
         <div
             ref={aboutSection}
             className="flex flex-col md:px-8 lg:px-12 xl:px-20 text-center mb-32"
         >
             {/* Heading: ABOUT ME part */}
-            <Title id="01." heading="About Me" />
+            <Title ref={aboutHeading} id="01." heading="About Me" />
 
             {/* Paragraph and Profile Container */}
             <div className="block md:grid md:justify-center md:grid-cols-2 mt-8 md:mt-12 lg:gap-x-8 xl:gap-x-12">

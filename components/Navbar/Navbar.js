@@ -48,7 +48,6 @@ const Navbar = () => {
     const handleNavClick = () => {
         // If closed, then open animation
         // back to hamburger animation
-
         console.log(hamburger.current.children[2]);
         if (isOpen) {
             gsap.timeline()
@@ -159,7 +158,7 @@ const Navbar = () => {
             </div>
             <div
                 ref={navContainer}
-                className="flex flex-col min-w-[320px] justify-around bg-navy-light md:bg-transparent top-0 right-0 fixed h-full md:relative md:flex-row items-center transition z-20 translate-x-[320px] md:translate-x-0"
+                className="flex flex-col min-w-[320px] justify-around bg-navy-light md:bg-transparent fixed top-0 right-0 h-full md:relative md:flex-row items-center transition z-20 translate-x-[320px] md:translate-x-0 backdrop-blur-xl"
             >
                 {/* Different Nav tabs or titles  */}
                 {navTitle.map((el, i) => (
