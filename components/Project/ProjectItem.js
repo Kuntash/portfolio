@@ -1,13 +1,13 @@
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { forwardRef } from 'react';
 //TODO:
-const ProjectItem = ({ project }) => {
+const ProjectItem = forwardRef(({ project }, ref) => {
     const { imageSrc, title, description, techList, repoLink, liveSiteLink } =
         project;
     return (
-        <div className="group grid grid-cols-12 mt-8 md:mt-12 ">
+        <div ref={ref} className="group grid grid-cols-12 mt-8 md:mt-12 ">
             {/*Profile Container for changing resizing based on viewport */}
             <div className="my-profile-container col-span-full row-start-1 row-end-7 md:group-even:col-start-7 md:group-even:col-end-13   group-odd:md:col-start-1 group-odd:md:col-end-7 xl:max-w-[700px] shadow-customShadow relative">
                 {/* Profile Image */}
@@ -58,6 +58,6 @@ const ProjectItem = ({ project }) => {
             </div>
         </div>
     );
-};
+});
 
 export default ProjectItem;

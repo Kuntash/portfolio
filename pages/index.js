@@ -4,7 +4,9 @@ import Heading from '../components/Heading/Heading';
 import Navbar from '../components/Navbar/Navbar';
 import About from '../components/About/About';
 import Project from '../components/Project/Project';
-
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 const Index = () => {
     return (
         <div className="bg-navy ">

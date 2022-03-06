@@ -4,12 +4,10 @@
     2: Make the component responsive
     3: Add animation and make it scrubbable using gsap3
 */
-import gsap, { Power2, Power3 } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import gsap, { Power2 } from 'gsap';
 import { useEffect, useRef } from 'react';
 import Title from '../Title';
 
-gsap.registerPlugin(ScrollTrigger);
 const About = () => {
     const aboutSection = useRef();
     const aboutHeading = useRef();
