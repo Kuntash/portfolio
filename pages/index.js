@@ -7,6 +7,16 @@ import Project from '../components/Project/Project';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
+
+/*
+
+    // TODO: Create a link component with underline and all
+    // TODO: Create a list component to display skills
+    // TODO: Create a minor project component that can be arranged in grid
+    // TODO: Get connected section after minor project and link t upwork
+    // TODO: Expose a link to upwork account 
+    // TODO: Remove the scroll markers
+*/
 const Index = () => {
     return (
         <div className="bg-navy ">
@@ -24,6 +34,7 @@ const Index = () => {
                 <Project />
                 <Footer />
             </div>
+            <div className="min-h-screen"></div>
         </div>
     );
 };

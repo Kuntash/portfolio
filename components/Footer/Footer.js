@@ -23,8 +23,15 @@ const Footer = () => {
         >
             <Mediabar />
             <Emailbar />
-            <p className="text-center text-sm sm:text-base font-mono md:hidden font-medium text-slate-light">
+            <p className="text-center text-sm sm:text-base font-mono hidden md:block font-medium text-slate-light">
                 Built using Next.js by Kunga Tashi
+            </p>
+            <p className="text-center text-sm sm:text-base font-mono hidden md:block font-medium text-slate-light">
+                Design Inspiration:
+                {/* TODO: Create a link component here */}
+                <a href="http://www.brittanychiang.com" target="_blank">
+                    Brittany Chiang
+                </a>
             </p>
         </div>
     );
