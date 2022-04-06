@@ -54,7 +54,10 @@ const About = () => {
             {/* Paragraph and Profile Container */}
             <div className="block md:grid md:justify-center md:grid-cols-2 mt-8 md:mt-12 lg:gap-x-8 xl:gap-x-12">
                 {/* Paragraph Container */}
-                <div ref={aboutParagraph} className="flex flex-col gap-y-4">
+                <div
+                    ref={aboutParagraph}
+                    className="flex flex-col gap-y-4 mb-8 md:mb-0"
+                >
                     <p className="text-left text-slate text-[18px]">
                         Hey there!! Thanks for visiting my portfolio, let me
                         start by telling a bit about me. My name is Kunga Tashi

@@ -34,7 +34,7 @@ const ProjectItem = forwardRef(({ project }, ref) => {
                     <p className="text-slate text-[17px]">{description}</p>
                 </div>
                 <ul
-                    className="py-6 flex justify-start md:group-even:justify-start md:justify-end text-slate text-[14px]
+                    className="py-6 flex justify-start md:group-even:justify-start flex-wrap md:justify-end text-slate text-[14px]
         tracking-widest font-semibold gap-x-4 md:gap-x-8"
                 >
                     {techList.map((tech, index) => (

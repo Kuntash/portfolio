@@ -35,7 +35,7 @@
     }
 
     .profile-overlay {
-        @apply bg-green rounded-lg mix-blend-multiply absolute top-0 w-full left-0 h-full transition ease-out;
+        @apply bg-navy-lightest md:bg-green rounded-lg mix-blend-multiply absolute top-0 w-full left-0 h-full transition ease-out;
     }
 
     /* About Section */

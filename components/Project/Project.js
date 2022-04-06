@@ -21,7 +21,6 @@ const toAnimation = (el) => {
             scrub: 1,
             start: 'top bottom',
             end: 'top center',
-            markers: true,
         },
         opacity: 1,
         y: 0,
