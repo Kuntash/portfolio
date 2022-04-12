@@ -51,6 +51,7 @@ const About = () => {
       className="flex flex-col md:px-8 lg:px-12 xl:px-20 text-center mb-32"
     >
       {/* Heading: ABOUT ME part */}
+      <a id="about"></a>
       <Title ref={aboutHeading} id="01." heading="About Me" />
 
       {/* Paragraph and Profile Container */}

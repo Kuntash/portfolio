@@ -18,25 +18,25 @@ gsap.registerPlugin(ScrollTrigger);
     // TODO: Remove the scroll markers
 */
 const Index = () => {
-    return (
-        <div className="bg-navy ">
-            {/* Head component for NEXT.JS */}
-            <Head>
-                <title> Kunga Tashi </title>
-                <link rel="shortcut icon" href="/favicon.ico" />
-            </Head>
+  return (
+    <div className="bg-navy ">
+      {/* Head component for NEXT.JS */}
+      <Head>
+        <title> Kunga Tashi </title>
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </Head>
 
-            <Navbar />
-            {/*FIXME: Change the padding media query to clamp()  */}
-            <div className="max-w-full w-screen flex flex-col xl:px-[150px] lg:px-[100px] md:px-[50px] sm:px-[25px] px-[20px]">
-                <Heading />
-                <About />
-                <Project />
-                <Footer />
-            </div>
-            <div className="min-h-screen"></div>
-        </div>
-    );
+      <Navbar />
+      {/*FIXME: Change the padding media query to clamp()  */}
+      <div className="max-w-full w-screen flex flex-col xl:px-[150px] lg:px-[100px] md:px-[50px] sm:px-[25px] px-[20px]">
+        <Heading />
+        <About />
+        <Project />
+        <Footer />
+      </div>
+      <div className="min-h-screen"></div>
+    </div>
+  );
 };
 
 export default Index;
