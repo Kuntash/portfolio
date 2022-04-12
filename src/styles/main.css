@@ -3,56 +3,55 @@
 @tailwind utilities;
 
 @layer components {
-    /* Heading Component */
-    .heading {
-        font-size: clamp(40px, 8vw, 80px);
-    }
-    /* Email bar */
-    .horizontal-mode {
-        writing-mode: horizontal-tb;
-    }
+  /* Heading Component */
+  .heading {
+    font-size: clamp(40px, 8vw, 80px);
+  }
+  /* Email bar */
+  .horizontal-mode {
+    writing-mode: horizontal-tb;
+  }
 
-    .vertical-mode {
-        writing-mode: vertical-rl;
-    }
-    /* Navbar  */
-    .sticky {
-        @apply fixed !important;
-        backdrop-filter: blur(10px);
-    }
-    /* Profile Image */
-    .my-profile-container {
-        display: inline-block;
-    }
-    .my-profile-container:hover .profile-border {
-        @apply top-4 left-4;
-    }
-    .profile-overlay:hover {
-        @apply bg-transparent;
-    }
-    .my-profile {
-        @apply w-full h-full;
-    }
+  .vertical-mode {
+    writing-mode: vertical-rl;
+  }
+  /* Navbar  */
+  .sticky {
+    @apply fixed !important;
+    backdrop-filter: blur(10px);
+  }
+  /* Profile Image */
+  .my-profile-container {
+    display: inline-block;
+  }
+  .my-profile-container:hover .profile-border {
+    @apply top-4 left-4;
+  }
+  .profile-overlay:hover {
+    @apply bg-transparent;
+  }
+  .my-profile {
+    @apply w-full h-full;
+  }
+  .profile-overlay {
+    @apply bg-green rounded-lg mix-blend-multiply absolute top-0 w-full left-0 h-full transition ease-out;
+  }
 
-    .profile-overlay {
-        @apply bg-navy-lightest md:bg-green rounded-lg mix-blend-multiply absolute top-0 w-full left-0 h-full transition ease-out;
-    }
-
-    /* About Section */
-    .about-me-heading {
-        font-size: clamp(25px, 5vw, 32px);
-    }
+  /* About Section */
+  .about-me-heading {
+    font-size: clamp(25px, 5vw, 32px);
+  }
 }
 body::-webkit-scrollbar {
-    width: 12px;
+  width: 12px;
 }
 
 body::-webkit-scrollbar-track {
-    background-color: #0a192f;
+  background-color: #0a192f;
 }
 
 body::-webkit-scrollbar-thumb {
-    background: #495670;
-    border-radius: 100vh;
-    border: 3px solid #0a192f;
+  background: #495670;
+  border-radius: 100vh;
+  border: 3px solid #0a192f;
 }

@@ -1,0 +1,16 @@
+export const skillList = [
+  'Javascript (ES6+)',
+  'CSS3',
+  'Sass',
+  'React Native',
+  'Reactjs',
+  'Nextjs',
+  'Nodejs',
+  'Expressjs',
+  'MongoDB',
+  'Mongoose',
+  'Tailwind CSS',
+  'Python',
+  'Typescript',
+  'C++',
+];
