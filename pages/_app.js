@@ -1,7 +1,7 @@
 import { faKorvue } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
-import 'tailwindcss/tailwind.css';
+// import 'tailwindcss/tailwind.css';
 import '../src/styles/main.css';
 
 function MyApp({ Component, pageProps }) {

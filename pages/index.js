@@ -34,7 +34,6 @@ const Index = () => {
         <Project />
         <Footer />
       </div>
-      <div className="min-h-screen"></div>
     </div>
   );
 };
