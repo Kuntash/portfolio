@@ -173,7 +173,11 @@ const Navbar = () => {
         ))}
 
         {/* Resume button */}
-        <CtaButton title="Resume" css="mx-4 my-2" link="./files/resume.pdf" />
+        <CtaButton
+          title="Resume"
+          css="mx-4 my-2"
+          link="https://drive.google.com/file/d/1-LfrpK26IHvttbwoWhFXu4U9vrD_TLfL/view?usp=sharing"
+        />
       </div>
     </div>
   );
