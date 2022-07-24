@@ -176,7 +176,7 @@ const Navbar = () => {
         <CtaButton
           title="Resume"
           css="mx-4 my-2"
-          link="https://drive.google.com/file/d/1-LfrpK26IHvttbwoWhFXu4U9vrD_TLfL/view?usp=sharing"
+          link="https://drive.google.com/file/d/1Q5Ffr33g3B_qbU-7yRyZ9ZE_E3zKeMMw/view?usp=sharing"
         />
       </div>
     </div>
