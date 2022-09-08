@@ -63,7 +63,7 @@ const About = () => {
         >
           <p className="text-left text-slate text-base">
             Hey there!! Thanks for visiting my portfolio, let me start by
-            telling a bit about me. My name is Kunga Tashi and I am sophomore at
+            telling a bit about me. My name is Kunga Tashi and I am a junior at
             {/* FIXME: Link here to www.nitrr.ac.in */} NIT Raipur doing B.Tech
             in Computer Science.
           </p>
