@@ -35,7 +35,7 @@ const Heading = () => {
       <h1 className="heading font-bold text-slate-lightest">Kunga Tashi.</h1>
       <h2 className="heading font-bold text-slate">I am a web developer.</h2>
       <p className="text-slate text-base max-w-lg mb-8">
-        I’m a Computer Science student [ sophomore ] at NIT Raipur with a keen
+        I’m a final year Computer Science student at NIT Raipur with a keen
         interest in web technologies. I specialize in building web applications
         and implementing pixel perfect UI to live code...
       </p>

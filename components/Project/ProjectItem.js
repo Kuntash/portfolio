@@ -38,18 +38,22 @@ const ProjectItem = forwardRef(({ project }, ref) => {
           ))}
         </ul>
         <div className="flex md:group-even:justify-start md:justify-end gap-x-8 items-center">
-          <a href={repoLink} target="_blank">
-            <FontAwesomeIcon
-              icon={faGithub}
-              className="transform transition duration-250 ease-out w-6 h-6 text-slate-light hover:text-green cursor-pointer"
-            />
-          </a>
-          <a href={liveSiteLink} target="_blank">
-            <FontAwesomeIcon
-              icon={faExternalLinkAlt}
-              className="transform transition duration-250 ease-out w-6 h-6 text-slate-light hover:text-green cursor-pointer"
-            />
-          </a>
+          {repoLink && (
+            <a href={repoLink} target="_blank">
+              <FontAwesomeIcon
+                icon={faGithub}
+                className="transform transition duration-250 ease-out w-6 h-6 text-slate-light hover:text-green cursor-pointer"
+              />
+            </a>
+          )}
+          {liveSiteLink && (
+            <a href={liveSiteLink} target="_blank">
+              <FontAwesomeIcon
+                icon={faExternalLinkAlt}
+                className="transform transition duration-250 ease-out w-6 h-6 text-slate-light hover:text-green cursor-pointer"
+              />
+            </a>
+          )}
         </div>
       </div>
     </div>

@@ -63,22 +63,20 @@ const About = () => {
         >
           <p className="text-left text-slate text-base">
             Hey there!! Thanks for visiting my portfolio, let me start by
-            telling a bit about me. My name is Kunga Tashi and I am a junior at
+            telling a bit about me. My name is Kunga Tashi and I am a final year
+            student at
             {/* FIXME: Link here to www.nitrr.ac.in */} NIT Raipur doing B.Tech
             in Computer Science.
           </p>
           <p className="text-left text-slate text-base">
-            Talking about my experiences with the modern web. I learned HTML and
-            CSS in 2017 when I was in my high school but lost the touch for
-            about 2 years. But in my 1st year as an undergrad, I thought of
-            diving once again into the world of web and it clicked this time.
-            While Covid was spreading all around, I learned different parts of
-            web while making simple projects which are in the
-            {/* FIXME: internal link to "archive section" */} archive section.
+            Till now I have interned at two companies for a period of 9 months
+            and have also received a full time offer as Frontend Engineer in my
+            third year. Its been almost a year now working full time and
+            managing studies and I have learned a lot along the way. I love to
+            craft user experiences that are pixel perfect, responsive,
+            accessible and performant.
           </p>
           <p className="text-left text-slate text-base">
-            Over a span of 2 years or so, I have accumulated different skills
-            and experimented with different library, frameworks and languages.
             Following are the languages and tech I have used to make projects
             and have experience with:
           </p>

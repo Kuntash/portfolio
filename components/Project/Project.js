@@ -56,7 +56,7 @@ const Project = () => {
       <a id="projects"></a>
       {/* Heading: Projects */}
       <Title ref={projectHeading} id="02." heading="Personal Projects" />
-      <div ref={projectItemContainer} className="flex flex-col gap-y-12">
+      <div ref={projectItemContainer} className="flex flex-col gap-y-12 md:pb-10">
         {projectData.map((project, index) => (
           <ProjectItem ref={projectItem} key={index} project={project} />
         ))}
